@@ -589,8 +589,19 @@ http://127.0.0.1:18080         Web 界面
 http://127.0.0.1:18080/api/v1  REST API
 :18081                         WebSocket 遥测流`,
     },
-    gallery: [],
+    gallery: [
+      { src: asset('img/flight/home.webp'), alt: { zh: '首页：实时飞行数据（演示数据）', en: 'Home: live flight data (demo data)' } },
+      { src: asset('img/flight/map.webp'), alt: { zh: '地图：航迹与罗盘（演示数据）', en: 'Map: track and compass (demo data)' } },
+      { src: asset('img/flight/monitor.webp'), alt: { zh: '监控：磁航向、起落架与趋势图（演示数据）', en: 'Monitor: heading, landing gear and trends (demo data)' } },
+      { src: asset('img/flight/efb.webp'), alt: { zh: '飞行卡：阶段、关键门限与油量（演示数据）', en: 'EFB flight card: phase, key limits and fuel (demo data)' } },
+      { src: asset('img/flight/briefing.webp'), alt: { zh: '简报：SimBrief 导入与航班输入', en: 'Briefing: SimBrief import and flight input' } },
+      { src: asset('img/flight/settings.webp'), alt: { zh: '设置：语言、日志与应用存储', en: 'Settings: language, logs and app storage' } },
+    ],
     notes: [
+      {
+        zh: '界面截图来自真实的中间件与 Web 前端，飞行数据由本地模拟的 X-Plane 数据源提供，为演示数据，并非真实飞行。',
+        en: 'The screenshots come from the real middleware and web frontend, with flight data supplied by a locally simulated X-Plane source. They are demo data, not a real flight.',
+      },
       {
         zh: '中间件本体闭源，只以编译后的单文件 EXE 分发；内置的 Web 前端是独立的开源项目。',
         en: 'The middleware itself is closed-source and ships only as a compiled single EXE; the embedded web frontend is a separate open-source project.',
