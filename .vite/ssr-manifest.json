@@ -30,49 +30,52 @@
   "node_modules/vue-router/dist/vue-router.mjs": [],
   "src/App.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/diagram/FlowDiagram.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/ProductPage-Db0Jg0r2.js"
+    "/assets/ProductPage-BRU0shop.js"
   ],
   "src/components/diagram/SynergyDiagram.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/components/sections/HeroSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/components/sections/PrinciplesSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/components/sections/ProductMatrix.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/components/sections/RoadmapSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/components/sections/ScenariosSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/components/sections/SynergySection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/components/ui/CodeBlock.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/ProductPage-Db0Jg0r2.js"
+    "/assets/ProductPage-BRU0shop.js"
   ],
   "src/components/ui/LangSwitch.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/ui/OpennessBadge.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/OpennessBadge.vue_vue_type_script_setup_true_lang-CHto5zQ-.js"
+  ],
   "src/components/ui/ProductMark.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/ui/StatusBadge.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/StatusBadge.vue_vue_type_script_setup_true_lang-CKU7Lt86.js"
+    "/assets/OpennessBadge.vue_vue_type_script_setup_true_lang-CHto5zQ-.js"
   ],
   "src/components/ui/ThemeToggle.vue?vue&type=script&setup=true&lang.ts": [],
   "src/composables/useLocale.ts": [],
   "src/composables/useSeo.ts": [
-    "/assets/useSeo-BAhOpTvz.js"
+    "/assets/useSeo-BvoA_51u.js"
   ],
   "src/composables/useTheme.ts": [],
   "src/data/flows.ts": [
-    "/assets/ProductPage-Db0Jg0r2.js"
+    "/assets/ProductPage-BRU0shop.js"
   ],
   "src/data/products.ts": [],
   "src/data/site.ts": [
-    "/assets/useSeo-BAhOpTvz.js"
+    "/assets/useSeo-BvoA_51u.js"
   ],
   "src/i18n/en.ts": [],
   "src/i18n/zh.ts": [],
@@ -80,34 +83,34 @@
   "src/layouts/SiteHeader.vue?vue&type=script&setup=true&lang.ts": [],
   "src/main.ts": [],
   "src/pages/AboutPage.vue": [
-    "/assets/AboutPage-D8An3cBU.js"
+    "/assets/AboutPage-DZZ3ui5n.js"
   ],
   "src/pages/AboutPage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/AboutPage-D8An3cBU.js"
+    "/assets/AboutPage-DZZ3ui5n.js"
   ],
   "src/pages/HomePage.vue": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/pages/HomePage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-eWbPE40F.js"
+    "/assets/HomePage-D_e-fs3z.js"
   ],
   "src/pages/LegalPage.vue": [
-    "/assets/LegalPage-sEISi3nK.js"
+    "/assets/LegalPage-DyRGZ-fk.js"
   ],
   "src/pages/LegalPage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/LegalPage-sEISi3nK.js"
+    "/assets/LegalPage-DyRGZ-fk.js"
   ],
   "src/pages/NotFoundPage.vue": [
-    "/assets/NotFoundPage-C_CWB1_W.js"
+    "/assets/NotFoundPage-DQMCoXTz.js"
   ],
   "src/pages/NotFoundPage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/NotFoundPage.vue_vue_type_script_setup_true_lang-CBqsj0my.js"
+    "/assets/NotFoundPage.vue_vue_type_script_setup_true_lang-BBIaZHe9.js"
   ],
   "src/pages/ProductPage.vue": [
-    "/assets/ProductPage-Db0Jg0r2.js"
+    "/assets/ProductPage-BRU0shop.js"
   ],
   "src/pages/ProductPage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/ProductPage-Db0Jg0r2.js"
+    "/assets/ProductPage-BRU0shop.js"
   ],
   "src/routes.ts": [],
   "src/styles/main.css": []

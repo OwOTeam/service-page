@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OwO! Recorder">
+  <title>OwO! Recorder</title>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a82f7"/>
+      <stop offset="0.55" stop-color="#2458db"/>
+      <stop offset="1" stop-color="#1a3fae"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d3e0ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="128" height="128" rx="30" fill="url(#tile)"/>
+  <circle cx="64" cy="66" r="50" fill="#fff" fill-opacity=".1"/>
+
+  <!-- 耳羽 -->
+  <g fill="#eaf0ff" stroke="#eaf0ff" stroke-width="7" stroke-linejoin="round">
+    <path d="M35 30 53 42 36 55Z"/>
+    <path d="M93 30 75 42 92 55Z"/>
+  </g>
+
+  <!-- 翅膀 -->
+  <path d="M30 64c-7 18-2 33 12 41 1-15-1-29-5-41Z" fill="#a9c1fb"/>
+  <path d="M98 64c7 18 2 33-12 41-1-15 1-29 5-41Z" fill="#a9c1fb"/>
+
+  <!-- 身体与头 -->
+  <ellipse cx="64" cy="68" rx="36" ry="40" fill="url(#body)"/>
+
+  <!-- 肚子：声波 -->
+  <rect x="42" y="79" width="44" height="27" rx="13.500" fill="#dbe6ff"/>
+  <g fill="#2458db">
+    <rect x="47" y="88" width="5" height="9" rx="2.500"/>
+    <rect x="55.500" y="84" width="5" height="17" rx="2.500"/>
+    <rect x="61.500" y="82" width="5" height="21" rx="2.500"/>
+    <rect x="67.500" y="84" width="5" height="17" rx="2.500"/>
+    <rect x="76" y="88" width="5" height="9" rx="2.500"/>
+  </g>
+
+  <!-- 眼睛 -->
+  <circle cx="47.500" cy="56" r="14" fill="#fff" stroke="#b9ccff" stroke-width="2"/>
+  <circle cx="80.500" cy="56" r="14" fill="#fff" stroke="#b9ccff" stroke-width="2"/>
+  <circle cx="49.500" cy="57.500" r="7.200" fill="#14213d"/>
+  <circle cx="78.500" cy="57.500" r="7.200" fill="#14213d"/>
+  <circle cx="51.800" cy="55" r="2.600" fill="#fff"/>
+  <circle cx="80.800" cy="55" r="2.600" fill="#fff"/>
+
+  <!-- 喙 -->
+  <path d="M59.500 64.500h9L64 73Z" fill="#2458db" stroke="#14213d" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- 耳机 -->
+  <path d="M29 62C27 26 101 26 99 62" fill="none" stroke="#14213d" stroke-width="7" stroke-linecap="round"/>
+  <rect x="19" y="53" width="15" height="26" rx="7.500" fill="#14213d"/>
+  <rect x="94" y="53" width="15" height="26" rx="7.500" fill="#14213d"/>
+  <rect x="23" y="59" width="7" height="14" rx="3.500" fill="#7ea4ff"/>
+  <rect x="98" y="59" width="7" height="14" rx="3.500" fill="#7ea4ff"/>
+
+  <!-- 脚 -->
+  <ellipse cx="53" cy="110" rx="7" ry="3.500" fill="#eaf0ff"/>
+  <ellipse cx="75" cy="110" rx="7" ry="3.500" fill="#eaf0ff"/>
+</svg>
