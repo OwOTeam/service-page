@@ -24,7 +24,7 @@ useSeo({
       url: `${SITE_URL}/`,
       logo: `${SITE_URL}/favicon.svg`,
       email: 'support@owoblog.com',
-      sameAs: ['https://owoblog.com'],
+      sameAs: ['https://hanskijay.dev'],
     },
     {
       '@type': 'WebSite',

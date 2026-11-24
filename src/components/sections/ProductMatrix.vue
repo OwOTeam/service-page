@@ -21,7 +21,7 @@ const { tr } = useLocale()
         v-for="p in products"
         :key="p.id"
         :to="`/products/${p.id}`"
-        class="card reveal group lg:col-span-3 relative flex flex-col overflow-hidden p-6 transition hover:-translate-y-1"
+        class="card reveal group lg:col-span-3 lg:last:odd:col-span-6 relative flex flex-col overflow-hidden p-6 transition hover:-translate-y-1"
         :style="{ '--accent': p.accent }"
       >
         <div

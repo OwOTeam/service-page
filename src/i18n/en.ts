@@ -19,7 +19,7 @@ const en: typeof zh = {
     eyebrow: 'Built by OwO Team',
     title: 'Put the essentials back in your own hands.',
     subtitle:
-      'Identity, offline travel, dev environments and flight data: four focused products that share one approach, self-hosted and local-first.',
+      'Identity, offline travel, lecture recording, dev environments and flight data: five focused products that share one approach, self-hosted and local-first.',
     ctaProducts: 'Browse products',
     ctaBlog: 'Author blog',
   },
@@ -33,7 +33,7 @@ const en: typeof zh = {
     items: [
       {
         title: 'Local-first and private',
-        desc: 'The travel assistant has zero telemetry and works fully offline; the identity service keeps tokens out of the browser; config exports are redacted automatically.',
+        desc: 'The travel assistant has zero telemetry and works fully offline; lecture recognition and translation run on your own device; the identity service keeps tokens out of the browser.',
       },
       {
         title: 'Simple to deploy',
@@ -78,7 +78,7 @@ const en: typeof zh = {
   about: {
     title: 'About OwO Team',
     intro:
-      'OwO Team is a small, focused independent group building self-hosted, local-first products: from identity and offline travel to dev environments and flight data.',
+      'OwO Team is a small, focused independent group building self-hosted, local-first products: from identity, offline travel and lecture recording to dev environments and flight data.',
     contactTitle: 'Contact',
     blog: 'Author blog',
     email: 'Email',

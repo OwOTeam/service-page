@@ -15,7 +15,7 @@ const { tr } = useLocale()
       <h2 class="h-section">{{ t('scenarios.title') }}</h2>
       <p class="mt-3 text-muted">{{ t('scenarios.subtitle') }}</p>
     </div>
-    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <RouterLink
         v-for="p in products"
         :key="p.id"

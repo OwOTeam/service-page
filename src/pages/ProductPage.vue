@@ -25,6 +25,7 @@ const others = computed(() => products.filter((p) => p.id !== props.id))
 useHead({ title: () => product.value?.name ?? '404' })
 const meta = {
   identity: { os: 'Linux (self-hosted)', cat: 'SecurityApplication', img: '/og.png' },
+  recorder: { os: 'Web + Windows / Linux / macOS client', cat: 'EducationalApplication', img: '/og.png' },
   travelai: { os: 'Android 8.0+', cat: 'TravelApplication', img: '/img/travelai/social.png' },
   deployer: { os: 'Windows', cat: 'DeveloperApplication', img: '/og.png' },
   flight: { os: 'Windows', cat: 'UtilitiesApplication', img: '/og.png' },
@@ -45,7 +46,7 @@ useSeo({
         '@type': 'SoftwareApplication',
         name: p.name,
         description: tr(p.summary),
-        softwareVersion: p.version.replace(/^v/, ''),
+        ...(p.version ? { softwareVersion: p.version.replace(/^v/, '') } : {}),
         applicationCategory: m.cat,
         operatingSystem: m.os,
         url: `${SITE_URL}/products/${p.id}`,
@@ -185,7 +186,7 @@ useSeo({
     <!-- 其他产品 -->
     <section class="container-x py-12">
       <h2 class="h-section">{{ t('product.others') }}</h2>
-      <div class="mt-6 grid gap-4 sm:grid-cols-3">
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
         <RouterLink
           v-for="p in others"
           :key="p.id"

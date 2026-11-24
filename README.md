@@ -1,11 +1,12 @@
 # OwO! 产品矩阵门户（service-page）
 
-OwO Team 的产品门户站，集中展示四个产品：
+OwO Team 的产品门户站，集中展示五个产品：
 
 | 产品 | 说明 |
 |---|---|
 | OwO! Identity | 自托管多租户企业身份提供商（OIDC / OAuth 2.0 / SAML 2.0） |
 | OwO! TravelAI | 离线优先的智能旅行助手（Android） |
+| OwO! Recorder | 本地优先的课堂录音与学习助手（网页 + 本机算力客户端） |
 | OwO! Win Deployer | 一条命令复刻 Windows 开发环境 |
 | OwO! FlightAssistant | MSFS / X-Plane 飞行数据中间件 |
 

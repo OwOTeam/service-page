@@ -7,7 +7,7 @@ import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
 import { SITE_URL } from './src/data/site'
 
-const PRODUCT_IDS = ['identity', 'travelai', 'deployer', 'flight']
+const PRODUCT_IDS = ['identity', 'travelai', 'recorder', 'deployer', 'flight']
 const PAGES = ['/', ...PRODUCT_IDS.map((id) => `/products/${id}`), '/about', '/legal']
 
 // 通过自定义域名 service.owoserver.com 部署在根路径（public/CNAME）

@@ -3,7 +3,7 @@
 
 export type Locale = 'zh' | 'en'
 export type L = Record<Locale, string>
-export type Tone = 'stable' | 'beta' | 'early'
+export type Tone = 'stable' | 'beta' | 'early' | 'live'
 
 export interface Feature {
   title: L
@@ -11,14 +11,15 @@ export interface Feature {
 }
 
 export interface Product {
-  id: 'identity' | 'travelai' | 'deployer' | 'flight'
+  id: 'identity' | 'travelai' | 'recorder' | 'deployer' | 'flight'
   name: string
   short: string
   accent: string
   logo?: string
   tagline: L
   summary: L
-  version: string
+  /** 未公开版本号的产品留空，不编造 */
+  version?: string
   released?: string
   status: { label: L; tone: Tone }
   platform: L
@@ -41,6 +42,7 @@ export const products: Product[] = [
     name: 'OwO! Identity',
     short: 'Identity',
     accent: '#1687e8',
+    logo: asset('img/identity/logo.svg'),
     tagline: {
       zh: '自托管的多租户企业身份提供商',
       en: 'A self-hosted, multi-tenant enterprise identity provider',
@@ -144,7 +146,7 @@ curl https://sso.owoserver.com/tenants/<slug>/.well-known/openid-configuration`,
     },
     links: [
       { label: { zh: '访问服务', en: 'Open the service' }, href: 'https://sso.owoserver.com', primary: true },
-      { label: { zh: '作者博客', en: 'Author blog' }, href: 'https://owoblog.com' },
+      { label: { zh: '作者博客', en: 'Author blog' }, href: 'https://hanskijay.dev' },
     ],
   },
   {
@@ -257,6 +259,115 @@ curl https://sso.owoserver.com/tenants/<slug>/.well-known/openid-configuration`,
     ],
   },
   {
+    id: 'recorder',
+    name: 'OwO! Recorder',
+    short: 'Recorder',
+    accent: '#e11d48',
+    tagline: {
+      zh: '本地优先的课堂录音与学习助手',
+      en: 'A local-first lecture recorder and study assistant',
+    },
+    summary: {
+      zh: '实时课堂翻译与学习辅助：识别、翻译、分析和总结都在你自己的设备上完成，服务器只负责云端同步、数据存储和日常运维。',
+      en: 'Live lecture translation and study support: recognition, translation, analysis and summaries all run on your own device, while the server only handles sync, storage and operations.',
+    },
+    status: {
+      label: { zh: '在线服务 · 登录使用', en: 'Hosted service · sign-in required' },
+      tone: 'live',
+    },
+    platform: {
+      zh: '网页 + 本机算力客户端（Windows / Linux / macOS）',
+      en: 'Web + on-device compute client (Windows / Linux / macOS)',
+    },
+    scenario: { zh: '我要上课录音', en: 'Recording lectures' },
+    stats: [
+      { value: '3', label: { zh: '客户端平台', en: 'Client platforms' } },
+      { value: '4 GB', label: { zh: '最低显存', en: 'Minimum VRAM' } },
+      { value: '0', label: { zh: '第三方上传', en: 'Third-party uploads' } },
+    ],
+    features: [
+      {
+        title: { zh: '实时语音识别', en: 'Live speech recognition' },
+        desc: {
+          zh: '在你自己的设备上把德语、英语等课堂音频转写为原文，完成速度取决于这台设备的性能。',
+          en: 'Transcribes German, English and other lecture audio on your own device; speed depends on that machine.',
+        },
+      },
+      {
+        title: { zh: '同步翻译', en: 'Synchronous translation' },
+        desc: {
+          zh: '每句话识别后立即翻译为你选择的目标语言，可与原文对照理解课堂内容。',
+          en: 'Each sentence is translated into your chosen target language right after recognition, side by side with the original.',
+        },
+      },
+      {
+        title: { zh: 'AI 课堂解析', en: 'AI lecture analysis' },
+        desc: {
+          zh: '术语解释、课堂重点与复习问题都在本机生成。',
+          en: 'Term explanations, lecture highlights and review questions are generated locally.',
+        },
+      },
+      {
+        title: { zh: '不上传第三方', en: 'No third-party uploads' },
+        desc: {
+          zh: '识别、翻译、分析和总结只在你自己的设备上处理；服务器只负责云端同步、数据存储和日常运维。',
+          en: 'Recognition, translation, analysis and summaries are processed only on your device; the server only handles sync, storage and operations.',
+        },
+      },
+      {
+        title: { zh: '课后笔记与导出', en: 'Notes and export' },
+        desc: {
+          zh: '课后生成双语课堂记录、中文笔记、术语表和复习题，方便复习备考。',
+          en: 'After class, produce a bilingual transcript, notes, a glossary and review questions for revision.',
+        },
+      },
+      {
+        title: { zh: '录音库管理', en: 'Recording library' },
+        desc: {
+          zh: '按分区和标签整理录音，支持导入音频文件，快速检索历史课堂内容。',
+          en: 'Organise recordings by section and tag, import audio files, and quickly search past lectures.',
+        },
+      },
+      {
+        title: { zh: '三步开始', en: 'Three steps to start' },
+        desc: {
+          zh: '选择课堂语言 → 开始录音，实时转写并翻译 → 课后查看解析并导出学习材料。',
+          en: 'Pick the lecture language, start recording for live transcription and translation, then review the analysis and export your study material.',
+        },
+      },
+      {
+        title: { zh: '运行要求', en: 'Requirements' },
+        desc: {
+          zh: '最低：4GB 显存配 8GB 内存即可上课；推荐 NVIDIA 8GB 显存与 16GB 内存。Windows 10/11 64 位、Linux x64 或 macOS 14+；客户端需 Python 3.11+。Apple M 系列需 16GB 统一内存。',
+          en: 'Minimum: 4 GB VRAM with 8 GB RAM is enough for a class; recommended is NVIDIA 8 GB VRAM with 16 GB RAM. Windows 10/11 64-bit, Linux x64 or macOS 14+; the client needs Python 3.11+. Apple M-series needs 16 GB unified memory.',
+        },
+      },
+    ],
+    stack: ['Web', 'Python 3.11+', 'PyTorch', 'CTranslate2'],
+    gallery: [],
+    notes: [
+      {
+        zh: '网页负责录音和阅读，听写、翻译与解析在你自己的算力客户端上运行，速度由那台电脑决定。',
+        en: 'The web app handles recording and reading; transcription, translation and analysis run on your own compute client, so speed depends on that computer.',
+      },
+      {
+        zh: '很旧的显卡可能无法使用当前固定的 PyTorch 和 CTranslate2；自检失败时把计算方案改成 CPU。大型听写、1.3B 翻译和 4B 解析需要独立显卡。',
+        en: 'Very old GPUs may not work with the pinned PyTorch and CTranslate2; if the self-check fails, switch the compute plan to CPU. Large dictation, 1.3B translation and 4B analysis need a discrete GPU.',
+      },
+      {
+        zh: '需要登录后使用。Intel Mac 目前只能尝试听写。',
+        en: 'Sign-in is required. Intel Macs can currently only try dictation.',
+      },
+    ],
+    license: {
+      zh: '未提供授权信息，不对开源或闭源作出声明。服务站点提供 Impressum、数据保护、使用说明、责任与存储费用等页面，请以服务站点为准。',
+      en: 'No licence information is provided, so no open- or closed-source claim is made. The service site carries its own legal pages (imprint, privacy, usage notes, liability, storage fees); refer to it.',
+    },
+    links: [
+      { label: { zh: '打开 OwO! Recorder', en: 'Open OwO! Recorder' }, href: 'https://record.owoserver.com/', primary: true },
+    ],
+  },
+  {
     id: 'deployer',
     name: 'OwO! Win Deployer',
     short: 'Win Deployer',
@@ -365,7 +476,7 @@ owodeploy apply      # 执行安装与配置`,
     },
     links: [
       { label: { zh: 'GitHub 仓库', en: 'GitHub repository' }, href: 'https://github.com/Tommy131/OwO-WinDeployer', primary: true },
-      { label: { zh: '商业授权', en: 'Commercial licence' }, href: 'https://owoblog.com/service' },
+      { label: { zh: '商业授权', en: 'Commercial licence' }, href: 'https://hanskijay.dev' },
     ],
   },
   {
@@ -476,7 +587,7 @@ http://127.0.0.1:18080/api/v1  REST API
 ]
 
 export const siteLinks = {
-  blog: 'https://owoblog.com',
+  blog: 'https://hanskijay.dev',
   email: 'support@owoblog.com',
 }
 

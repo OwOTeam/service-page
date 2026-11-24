@@ -23,8 +23,8 @@ function keys(o: unknown, prefix = ''): string[] {
 }
 
 describe('products data', () => {
-  it('has four products with unique ids', () => {
-    expect(products.map((p) => p.id).sort()).toEqual(['deployer', 'flight', 'identity', 'travelai'])
+  it('has five products with unique ids', () => {
+    expect(products.map((p) => p.id).sort()).toEqual(['deployer', 'flight', 'identity', 'recorder', 'travelai'])
   })
 
   it('every localized string has non-empty zh and en', () => {
@@ -42,7 +42,7 @@ describe('products data', () => {
     for (const p of products) {
       expect(p.links.length, p.id).toBeGreaterThan(0)
       expect(p.stats.length, p.id).toBe(3)
-      expect(p.version, p.id).toMatch(/^v\d/)
+      if (p.version) expect(p.version, p.id).toMatch(/^v\d/)
     }
   })
 

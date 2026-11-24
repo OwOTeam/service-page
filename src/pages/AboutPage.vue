@@ -20,7 +20,7 @@ useSeo({ title: () => t('about.title'), description: () => t('about.intro'), pat
       <dl class="mt-5 space-y-3 text-sm">
         <div class="flex flex-wrap gap-x-3">
           <dt class="w-16 shrink-0 text-muted">{{ t('about.blog') }}</dt>
-          <dd><a :href="siteLinks.blog" target="_blank" rel="noopener" class="font-medium text-brand hover:underline">owoblog.com</a></dd>
+          <dd><a :href="siteLinks.blog" target="_blank" rel="noopener" class="font-medium text-brand hover:underline">hanskijay.dev</a></dd>
         </div>
         <div class="flex flex-wrap gap-x-3">
           <dt class="w-16 shrink-0 text-muted">{{ t('about.email') }}</dt>
@@ -40,7 +40,7 @@ useSeo({ title: () => t('about.title'), description: () => t('about.intro'), pat
     <div class="card mt-5 p-6 sm:p-8">
       <h2 class="text-xl font-semibold">{{ t('about.commercial') }}</h2>
       <p class="mt-2 text-sm text-muted">{{ t('about.commercialDesc') }}</p>
-      <a :href="`${siteLinks.blog}/service`" target="_blank" rel="noopener" class="btn btn-primary mt-5">owoblog.com/service</a>
+      <a :href="siteLinks.blog" target="_blank" rel="noopener" class="btn btn-primary mt-5">hanskijay.dev</a>
     </div>
   </section>
 </template>

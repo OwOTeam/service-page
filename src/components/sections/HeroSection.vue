@@ -5,7 +5,13 @@ import { products, siteLinks } from '@/data/products'
 import ProductMark from '@/components/ui/ProductMark.vue'
 
 const { t } = useI18n()
-const positions = ['left-0 top-6', 'right-0 top-0', 'left-8 bottom-0', 'right-6 bottom-8']
+const positions = [
+  'left-0 top-4',
+  'right-0 top-0',
+  'left-1/2 top-24 -translate-x-1/2',
+  'left-2 bottom-0',
+  'right-2 bottom-2',
+]
 </script>
 
 <template>
@@ -28,7 +34,7 @@ const positions = ['left-0 top-6', 'right-0 top-0', 'left-8 bottom-0', 'right-6 
         </div>
       </div>
 
-      <!-- 四个产品标志的漂浮网格 -->
+      <!-- 产品标志的漂浮网格 -->
       <div class="relative mx-auto hidden h-72 w-full max-w-sm lg:block" aria-hidden="true">
         <RouterLink
           v-for="(p, i) in products"
