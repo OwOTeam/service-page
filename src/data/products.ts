@@ -601,8 +601,8 @@ http://127.0.0.1:18080/api/v1  REST API
       },
     ],
     license: {
-      zh: '开源项目，源码公开。具体许可证请以仓库内的 LICENSE 为准：目前中间件仓库尚未附带 LICENSE 文件，内置 Web 前端附 CC BY-NC-SA 4.0 许可证。',
-      en: 'Open source: the source code is public. Refer to the LICENSE in each repository: the middleware repository does not ship a LICENSE file yet, and the embedded web frontend carries a CC BY-NC-SA 4.0 licence.',
+      zh: '开源项目，源码公开。采用 CC BY-NC-SA 4.0（与 OwO! Win Deployer 相同），仅限个人学习与研究，禁止商业使用；商业授权请通过作者博客联系。',
+      en: 'Open source: the source code is public. Licensed under CC BY-NC-SA 4.0 (the same as OwO! Win Deployer), for personal study and research only with no commercial use; for commercial licences, contact the author through the blog.',
     },
     links: [
       { label: { zh: 'GitHub 仓库', en: 'GitHub repository' }, href: 'https://github.com/Tommy131/OwO-FlightAssistant-Middleware', primary: true },
