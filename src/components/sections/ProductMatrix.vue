@@ -5,6 +5,7 @@ import { products } from '@/data/products'
 import { useLocale } from '@/composables/useLocale'
 import ProductMark from '@/components/ui/ProductMark.vue'
 import StatusBadge from '@/components/ui/StatusBadge.vue'
+import OpennessBadge from '@/components/ui/OpennessBadge.vue'
 
 const { t } = useI18n()
 const { tr } = useLocale()
@@ -31,7 +32,10 @@ const { tr } = useLocale()
         />
         <div class="relative flex flex-wrap items-start justify-between gap-3">
           <ProductMark :product="p" :size="52" />
-          <StatusBadge :product="p" />
+          <div class="flex flex-wrap justify-end gap-2">
+            <StatusBadge :product="p" />
+            <OpennessBadge :product="p" />
+          </div>
         </div>
         <h3 class="relative mt-5 text-xl font-bold tracking-tight">{{ p.name }}</h3>
         <p class="relative mt-1 font-medium">{{ tr(p.tagline) }}</p>

@@ -6,6 +6,7 @@ import { products } from '@/data/products'
 import { useLocale } from '@/composables/useLocale'
 import ProductMark from '@/components/ui/ProductMark.vue'
 import StatusBadge from '@/components/ui/StatusBadge.vue'
+import OpennessBadge from '@/components/ui/OpennessBadge.vue'
 
 const { t } = useI18n()
 const { tr } = useLocale()
@@ -23,6 +24,7 @@ useSeo({ title: () => t('legal.title'), description: () => t('legal.intro'), pat
           <ProductMark :product="p" :size="36" />
           <h2 class="text-lg font-semibold">{{ p.name }}</h2>
           <StatusBadge :product="p" />
+          <OpennessBadge :product="p" />
         </div>
         <p class="mt-3 text-sm text-muted">{{ tr(p.license) }}</p>
         <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-muted">

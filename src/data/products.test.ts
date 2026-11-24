@@ -46,6 +46,17 @@ describe('products data', () => {
     }
   })
 
+  it('records the confirmed open-source status of every product', () => {
+    const status = Object.fromEntries(products.map((p) => [p.id, p.openness]))
+    expect(status).toEqual({
+      identity: 'closed',
+      travelai: 'closed',
+      recorder: 'closed',
+      deployer: 'open',
+      flight: 'open',
+    })
+  })
+
   it('timeline is sorted newest first', () => {
     const dates = timeline.map((p) => p.released)
     expect(dates).toEqual([...dates].sort().reverse())

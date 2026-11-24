@@ -4,6 +4,7 @@
 export type Locale = 'zh' | 'en'
 export type L = Record<Locale, string>
 export type Tone = 'stable' | 'beta' | 'early' | 'live'
+export type Openness = 'open' | 'closed'
 
 export interface Feature {
   title: L
@@ -14,6 +15,8 @@ export interface Product {
   id: 'identity' | 'travelai' | 'recorder' | 'deployer' | 'flight'
   name: string
   short: string
+  /** 源码是否公开：由作者确认 */
+  openness: Openness
   accent: string
   logo?: string
   tagline: L
@@ -41,6 +44,7 @@ export const products: Product[] = [
     id: 'identity',
     name: 'OwO! Identity',
     short: 'Identity',
+    openness: 'closed',
     accent: '#1687e8',
     logo: asset('img/identity/logo.svg'),
     tagline: {
@@ -141,8 +145,8 @@ curl https://sso.owoserver.com/tenants/<slug>/.well-known/openid-configuration`,
       },
     ],
     license: {
-      zh: '自托管部署。授权与分发方式请以官方说明为准。',
-      en: 'Self-hosted deployment. For licensing and distribution terms, refer to official notes.',
+      zh: '闭源项目，源码不公开。',
+      en: 'Closed-source: the source code is not public.',
     },
     links: [
       { label: { zh: '访问服务', en: 'Open the service' }, href: 'https://sso.owoserver.com', primary: true },
@@ -153,6 +157,7 @@ curl https://sso.owoserver.com/tenants/<slug>/.well-known/openid-configuration`,
     id: 'travelai',
     name: 'OwO! TravelAI',
     short: 'TravelAI',
+    openness: 'closed',
     accent: '#6366f1',
     logo: asset('img/travelai/owl.svg'),
     tagline: {
@@ -250,18 +255,18 @@ curl https://sso.owoserver.com/tenants/<slug>/.well-known/openid-configuration`,
       },
     ],
     license: {
-      zh: '仓库暂未提供 LICENSE 文件，不对开源或闭源作出声明。第三方数据与模型各自遵循其许可（如 OSM ODbL、Wikipedia CC BY-SA）。',
-      en: 'The repository does not ship a LICENSE file, so no open- or closed-source claim is made. Third-party data and models follow their own licences (for example OSM ODbL and Wikipedia CC BY-SA).',
+      zh: '闭源项目，源码不公开。第三方数据与模型各自遵循其许可（如 OSM ODbL、Wikipedia CC BY-SA）。',
+      en: 'Closed-source: the source code is not public. Third-party data and models follow their own licences (for example OSM ODbL and Wikipedia CC BY-SA).',
     },
     links: [
       { label: { zh: '产品官网', en: 'Product site' }, href: 'https://travelai.owoserver.com/', primary: true },
-      { label: { zh: 'GitHub', en: 'GitHub' }, href: 'https://github.com/OwOTeam/OwO-TravelAI' },
     ],
   },
   {
     id: 'recorder',
     name: 'OwO! Recorder',
     short: 'Recorder',
+    openness: 'closed',
     accent: '#2458db',
     logo: asset('img/recorder/logo.svg'),
     tagline: {
@@ -378,8 +383,8 @@ curl https://sso.owoserver.com/tenants/<slug>/.well-known/openid-configuration`,
       },
     ],
     license: {
-      zh: '源码仓库内附 MIT 许可证（Copyright 2026 HanskiJay）。仓库目前不公开访问；在线服务另有使用说明、数据保护、责任、推理说明与存储费用等条款，请以服务站点为准。第三方依赖与模型各自遵循其许可。',
-      en: 'The source repository ships an MIT licence (Copyright 2026 HanskiJay) and is not publicly accessible at the moment. The hosted service has its own usage notes, privacy, liability, inference and storage-fee terms; refer to the service site. Third-party dependencies and models follow their own licences.',
+      zh: '闭源项目，源码不公开。在线服务另有使用说明、数据保护、责任、推理说明与存储费用等条款，请以服务站点为准。第三方依赖与模型各自遵循其许可。',
+      en: 'Closed-source: the source code is not public. The hosted service has its own usage notes, privacy, liability, inference and storage-fee terms; refer to the service site. Third-party dependencies and models follow their own licences.',
     },
     links: [
       { label: { zh: '打开 OwO! Recorder', en: 'Open OwO! Recorder' }, href: 'https://record.owoserver.com/', primary: true },
@@ -389,6 +394,7 @@ curl https://sso.owoserver.com/tenants/<slug>/.well-known/openid-configuration`,
     id: 'deployer',
     name: 'OwO! Win Deployer',
     short: 'Win Deployer',
+    openness: 'open',
     accent: '#16a34a',
     logo: asset('img/deployer/icon.png'),
     tagline: {
@@ -489,8 +495,8 @@ owodeploy apply      # 执行安装与配置`,
       },
     ],
     license: {
-      zh: '社区版采用 CC BY-NC-SA 4.0，仅限个人学习与研究，禁止商业使用。商业授权请通过作者博客联系。',
-      en: 'The Community edition is CC BY-NC-SA 4.0: personal study and research only, no commercial use. For commercial licences, contact the author through the blog.',
+      zh: '开源项目，源码公开。社区版采用 CC BY-NC-SA 4.0，仅限个人学习与研究，禁止商业使用；商业授权请通过作者博客联系。',
+      en: 'Open source: the source code is public. The Community edition is CC BY-NC-SA 4.0, for personal study and research only with no commercial use; for commercial licences, contact the author through the blog.',
     },
     links: [
       { label: { zh: 'GitHub 仓库', en: 'GitHub repository' }, href: 'https://github.com/Tommy131/OwO-WinDeployer', primary: true },
@@ -501,6 +507,7 @@ owodeploy apply      # 执行安装与配置`,
     id: 'flight',
     name: 'OwO! FlightAssistant',
     short: 'FlightAssistant',
+    openness: 'open',
     accent: '#f59e0b',
     logo: asset('img/flight/logo.svg'),
     tagline: {
@@ -594,8 +601,8 @@ http://127.0.0.1:18080/api/v1  REST API
       },
     ],
     license: {
-      zh: '仓库内的授权说明相互不一致，暂不对许可证作出声明，请以仓库发布页为准。',
-      en: 'Licence notes in the repository are inconsistent, so no licence is claimed here. Refer to the repository releases.',
+      zh: '开源项目，源码公开。具体许可证请以仓库内的 LICENSE 为准：目前中间件仓库尚未附带 LICENSE 文件，内置 Web 前端附 CC BY-NC-SA 4.0 许可证。',
+      en: 'Open source: the source code is public. Refer to the LICENSE in each repository: the middleware repository does not ship a LICENSE file yet, and the embedded web frontend carries a CC BY-NC-SA 4.0 licence.',
     },
     links: [
       { label: { zh: 'GitHub 仓库', en: 'GitHub repository' }, href: 'https://github.com/Tommy131/OwO-FlightAssistant-Middleware', primary: true },

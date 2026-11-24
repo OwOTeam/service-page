@@ -72,6 +72,8 @@ export default {
     version: '版本',
     copy: '复制',
     copied: '已复制',
+    open: '开源',
+    closed: '闭源',
   },
   about: {
     title: '关于 OwO Team',
@@ -87,7 +89,7 @@ export default {
   },
   legal: {
     title: '许可与声明',
-    intro: '以下仅陈述已确认的事实；没有明确 LICENSE 的项目不作开源或闭源声明，请以各仓库为准。',
+    intro: '各产品的开源状态与授权说明如下。只陈述已确认的事实，具体条款请以各产品的仓库或服务站点为准。',
     disclaimer: '页面内容基于各项目公开信息整理，版本与功能可能随发布调整。',
   },
   footer: {

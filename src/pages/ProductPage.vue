@@ -10,6 +10,7 @@ import { useSeo } from '@/composables/useSeo'
 import { useLocale } from '@/composables/useLocale'
 import ProductMark from '@/components/ui/ProductMark.vue'
 import StatusBadge from '@/components/ui/StatusBadge.vue'
+import OpennessBadge from '@/components/ui/OpennessBadge.vue'
 import CodeBlock from '@/components/ui/CodeBlock.vue'
 import FlowDiagram from '@/components/diagram/FlowDiagram.vue'
 import NotFoundPage from './NotFoundPage.vue'
@@ -84,7 +85,10 @@ useSeo({
         <div class="mt-6 flex flex-col gap-6 sm:flex-row sm:items-center">
           <ProductMark :product="product" :size="84" />
           <div>
-            <StatusBadge :product="product" />
+            <div class="flex flex-wrap gap-2">
+              <StatusBadge :product="product" />
+              <OpennessBadge :product="product" />
+            </div>
             <h1 class="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">{{ product.name }}</h1>
           </div>
         </div>

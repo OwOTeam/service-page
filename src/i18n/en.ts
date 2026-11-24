@@ -74,6 +74,8 @@ const en: typeof zh = {
     version: 'Version',
     copy: 'Copy',
     copied: 'Copied',
+    open: 'Open source',
+    closed: 'Closed source',
   },
   about: {
     title: 'About OwO Team',
@@ -90,7 +92,7 @@ const en: typeof zh = {
   legal: {
     title: 'Licences and notices',
     intro:
-      'Only confirmed facts are stated here. Projects without a clear LICENSE file are not described as open or closed source; refer to each repository.',
+      'Each product’s open-source status and licence are listed below. Only confirmed facts are stated; refer to each product’s repository or service site for the exact terms.',
     disclaimer: 'Content is compiled from public project information; versions and features may change with releases.',
   },
   footer: {
