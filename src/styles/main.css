@@ -1,0 +1,199 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- 设计令牌：亮 / 暗 ---------- */
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --line: #e2e8f0;
+  --ink: #0f172a;
+  --muted: #526071;
+  --brand: #2563eb;
+  --brand-ink: #ffffff;
+  --glow: rgb(37 99 235 / 0.16);
+  color-scheme: light;
+}
+.dark {
+  --bg: #0a0f1c;
+  --surface: #111827;
+  --surface-2: #172033;
+  --line: #243049;
+  --ink: #e6ebf5;
+  --muted: #9aa8bf;
+  --brand: #4f8cff;
+  --brand-ink: #06101f;
+  --glow: rgb(79 140 255 / 0.2);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --font-sans: 'Inter', 'Noto Sans SC', ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -12px rgb(15 23 42 / 0.12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: var(--glow);
+  }
+}
+
+/* ---------- 复用组件类 ---------- */
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container-x {
+      padding-inline: 1.5rem;
+    }
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-card);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0.55rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    transition:
+      transform 0.15s ease,
+      background 0.15s ease,
+      border-color 0.15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-1px);
+    border-color: var(--brand);
+  }
+  .btn-primary {
+    background: var(--brand);
+    color: var(--brand-ink);
+    border-color: transparent;
+  }
+  .btn-primary:hover {
+    filter: brightness(1.08);
+    border-color: transparent;
+  }
+  .eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand);
+  }
+  .h-section {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.15rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+}
+
+/* ---------- 动效：滚动驱动进场，不支持时直接显示 ---------- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+/* 路由与主题的 View Transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+}
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.18s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

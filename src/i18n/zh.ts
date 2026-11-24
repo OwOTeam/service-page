@@ -1,0 +1,100 @@
+export default {
+  brand: { name: 'OwO!', tagline: '自托管、本地优先的工具矩阵' },
+  nav: {
+    products: '产品',
+    about: '关于',
+    legal: '许可与声明',
+    theme: '切换主题',
+    themeLight: '浅色',
+    themeDark: '深色',
+    themeSystem: '跟随系统',
+    language: '语言',
+    menu: '菜单',
+    close: '关闭',
+    skip: '跳到主要内容',
+  },
+  hero: {
+    eyebrow: '由 OwO Team 打造',
+    title: '把关键能力，放回你自己手里。',
+    subtitle:
+      '身份认证、离线旅行、开发环境、飞行数据——四个各有所长的产品，共同遵循“自托管 / 本地优先”的做法。',
+    ctaProducts: '浏览产品',
+    ctaBlog: '作者博客',
+  },
+  matrix: {
+    title: '产品矩阵',
+    subtitle: '每个产品解决一个具体问题，也能彼此配合。',
+    learnMore: '了解详情',
+  },
+  principles: {
+    title: '共同的做法',
+    items: [
+      {
+        title: '本地优先与隐私',
+        desc: '旅行助手零遥测、全离线可用；身份服务的浏览器不持有令牌；配置导出自动脱敏。',
+      },
+      {
+        title: '单体易部署',
+        desc: '一个 EXE、一个 APK、一套自托管服务——减少依赖，让运维面保持很小。',
+      },
+      {
+        title: '标准与可验证',
+        desc: 'OIDC / SAML 等公开标准、Ed25519 签名的离线包、锁定版本的 lock.json，结果可被检查。',
+      },
+    ],
+  },
+  synergy: {
+    title: '产品如何协同',
+    subtitle: '它们相互独立，但在需要时可以接在一起。',
+    caption1: 'OIDC · TOTP · Passkey',
+    caption2: '一条命令还原环境',
+    caption3: 'REST · WebSocket',
+    note: 'TravelAI 的账号体系基于 OwO! Identity；其余产品可单独使用。',
+  },
+  scenarios: {
+    title: '从你的场景出发',
+    subtitle: '直接跳到最贴近你需求的产品。',
+  },
+  roadmap: {
+    title: '版本与状态',
+    subtitle: '以下均为各产品当前公开的最新版本。',
+  },
+  product: {
+    back: '全部产品',
+    features: '核心能力',
+    stack: '技术栈',
+    quickstart: '快速开始',
+    gallery: '界面预览',
+    notes: '使用前请知悉',
+    license: '许可与授权',
+    others: '其他产品',
+    platform: '平台',
+    version: '版本',
+    copy: '复制',
+    copied: '已复制',
+  },
+  about: {
+    title: '关于 OwO Team',
+    intro:
+      'OwO Team 是一个小而专注的独立开发团队，围绕“自托管、本地优先”做产品：从身份认证、离线旅行到开发环境与飞行数据。',
+    contactTitle: '联系',
+    blog: '作者博客',
+    email: '邮箱',
+    wechat: '微信',
+    wechatHint: '扫码添加微信',
+    commercial: '商业授权与合作',
+    commercialDesc: '需要商业授权、定制或合作，请通过博客或邮箱联系。',
+  },
+  legal: {
+    title: '许可与声明',
+    intro: '以下仅陈述已确认的事实；没有明确 LICENSE 的项目不作开源或闭源声明，请以各仓库为准。',
+    disclaimer: '页面内容基于各项目公开信息整理，版本与功能可能随发布调整。',
+  },
+  footer: {
+    products: '产品',
+    resources: '资源',
+    rights: '© {year} OwO Team. 保留所有权利。',
+    built: '使用 Vue 3 + Vite 构建',
+  },
+  notfound: { title: '页面不存在', desc: '你访问的页面可能已移动，或者从未存在。', home: '返回首页' },
+}

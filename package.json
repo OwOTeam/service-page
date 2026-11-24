@@ -1,6 +1,6 @@
 {
-  "name": "owo-service",
-  "version": "1.0.0",
+  "name": "owo-portal",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -8,33 +8,42 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "vue-tsc --build && vite-ssg build",
     "preview": "vite preview",
-    "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "lint": "eslint .",
+    "format": "prettier --write src/",
+    "test": "vitest run"
   },
   "dependencies": {
-    "vue": "^3.5.18",
-    "vue-router": "^4.5.1"
+    "@unhead/vue": "^2.1.18",
+    "@vueuse/core": "^15.1.0",
+    "vite-ssg": "^28.3.0",
+    "vue": "^3.5.46",
+    "vue-i18n": "^11.4.23",
+    "vue-router": "^4.6.5"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.16.5",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
+    "@vue/test-utils": "^2.6.0",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.31.0",
     "eslint-plugin-vue": "~10.3.0",
     "jiti": "^2.4.2",
+    "jsdom": "^31.0.1",
     "npm-run-all2": "^8.0.4",
     "prettier": "3.6.2",
+    "tailwindcss": "^4.3.5",
     "terser": "^5.44.0",
     "typescript": "~5.8.0",
     "vite": "^7.0.6",
     "vite-plugin-vue-devtools": "^8.0.0",
+    "vitest": "^5.1.1",
     "vue-tsc": "^3.0.4"
   }
 }
