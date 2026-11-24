@@ -56,7 +56,7 @@ public/img/     各产品截图与图标
 
 ## 部署
 
-推送到 `main` 后，[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 会执行 lint、测试与构建，并通过 GitHub Pages 官方 Action 发布。首次使用需在仓库 Settings → Pages 中把 Source 设为 **GitHub Actions**。
+推送到 `main` 后，[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) 会执行 lint、测试与构建，并通过 `peaceiris/actions-gh-pages` 把 `dist` 推送到 `gh-pages` 分支。仓库 Settings → Pages 的 Source 保持为 **Deploy from a branch → gh-pages**。
 
 站点通过自定义域名 **https://service.owoserver.com** 部署在根路径：`vite.config.ts` 的 `base` 为 `/`，`public/CNAME` 会随构建产物发布。需要在 DNS 中把 `service` 以 CNAME 指向 `<GitHub 用户名>.github.io`，并在仓库 Settings → Pages 中填入该自定义域名并启用 HTTPS。
 
