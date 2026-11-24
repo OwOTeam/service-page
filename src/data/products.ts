@@ -4,7 +4,7 @@
 export type Locale = 'zh' | 'en'
 export type L = Record<Locale, string>
 export type Tone = 'stable' | 'beta' | 'early' | 'live'
-export type Openness = 'open' | 'closed'
+export type Openness = 'open' | 'partial' | 'closed'
 
 export interface Feature {
   title: L
@@ -507,7 +507,7 @@ owodeploy apply      # 执行安装与配置`,
     id: 'flight',
     name: 'OwO! FlightAssistant',
     short: 'FlightAssistant',
-    openness: 'open',
+    openness: 'partial',
     accent: '#f59e0b',
     logo: asset('img/flight/logo.svg'),
     tagline: {
@@ -592,6 +592,10 @@ http://127.0.0.1:18080/api/v1  REST API
     gallery: [],
     notes: [
       {
+        zh: '中间件本体闭源，只以编译后的单文件 EXE 分发；内置的 Web 前端是独立的开源项目。',
+        en: 'The middleware itself is closed-source and ships only as a compiled single EXE; the embedded web frontend is a separate open-source project.',
+      },
+      {
         zh: '当前为 Beta 版本，接口与行为可能调整。',
         en: 'This is a beta release; APIs and behaviour may change.',
       },
@@ -601,12 +605,12 @@ http://127.0.0.1:18080/api/v1  REST API
       },
     ],
     license: {
-      zh: '开源项目，源码公开。采用 CC BY-NC-SA 4.0（与 OwO! Win Deployer 相同），仅限个人学习与研究，禁止商业使用；商业授权请通过作者博客联系。',
-      en: 'Open source: the source code is public. Licensed under CC BY-NC-SA 4.0 (the same as OwO! Win Deployer), for personal study and research only with no commercial use; for commercial licences, contact the author through the blog.',
+      zh: '部分开源：中间件闭源，源码不公开，仅以编译产物随发布页分发；内置的 Web 前端开源，采用 CC BY-NC-SA 4.0，仅限个人学习与研究，禁止商业使用。',
+      en: 'Partly open source: the middleware is closed-source, with no public source code, and is distributed only as compiled releases; the embedded web frontend is open source under CC BY-NC-SA 4.0, for personal study and research only with no commercial use.',
     },
     links: [
-      { label: { zh: 'GitHub 仓库', en: 'GitHub repository' }, href: 'https://github.com/Tommy131/OwO-FlightAssistant-Middleware', primary: true },
-      { label: { zh: '前端项目', en: 'Frontend project' }, href: 'https://github.com/Tommy131/OwO-FlightAssistant' },
+      { label: { zh: '下载发布版', en: 'Download releases' }, href: 'https://github.com/Tommy131/OwO-FlightAssistant-Middleware/releases', primary: true },
+      { label: { zh: '开源前端项目', en: 'Open-source frontend' }, href: 'https://github.com/Tommy131/OwO-FlightAssistant' },
     ],
   },
 ]

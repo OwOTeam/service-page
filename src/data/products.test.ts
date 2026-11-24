@@ -53,7 +53,7 @@ describe('products data', () => {
       travelai: 'closed',
       recorder: 'closed',
       deployer: 'open',
-      flight: 'open',
+      flight: 'partial',
     })
   })
 

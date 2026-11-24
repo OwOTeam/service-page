@@ -75,6 +75,7 @@ const en: typeof zh = {
     copy: 'Copy',
     copied: 'Copied',
     open: 'Open source',
+    partial: 'Partly open source',
     closed: 'Closed source',
   },
   about: {

@@ -38,7 +38,7 @@ npm run preview    # 预览构建结果
 更新某个产品时：
 
 1. 修改 `products.ts` 中对应条目的 `version`、`released`、`status` 和功能描述。
-2. 每个产品的 `openness`（开源 / 闭源）由作者确认：目前 Win Deployer 与 FlightAssistant 开源，Identity、TravelAI、Recorder 闭源。授权细节只写已确认的事实，不要编造许可证；闭源项目不放 GitHub 仓库链接。
+2. 每个产品的 `openness`（开源 / 闭源）由作者确认：目前 Win Deployer 开源；FlightAssistant 为部分开源（中间件闭源，内置 Web 前端开源）；Identity、TravelAI、Recorder 闭源。授权细节只写已确认的事实，不要编造许可证；闭源项目不放 GitHub 仓库链接。
 3. 没有真实截图的产品用 [`src/data/flows.ts`](src/data/flows.ts) 的示意图，不要伪造界面截图。
 
 ## 目录结构

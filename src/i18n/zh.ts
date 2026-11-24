@@ -73,6 +73,7 @@ export default {
     copy: '复制',
     copied: '已复制',
     open: '开源',
+    partial: '部分开源',
     closed: '闭源',
   },
   about: {
