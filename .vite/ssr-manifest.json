@@ -30,52 +30,52 @@
   "node_modules/vue-router/dist/vue-router.mjs": [],
   "src/App.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/diagram/FlowDiagram.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/ProductPage-CKKYVoyR.js"
+    "/assets/ProductPage-D5Ikr_Nk.js"
   ],
   "src/components/diagram/SynergyDiagram.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/components/sections/HeroSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/components/sections/PrinciplesSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/components/sections/ProductMatrix.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/components/sections/RoadmapSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/components/sections/ScenariosSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/components/sections/SynergySection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/components/ui/CodeBlock.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/ProductPage-CKKYVoyR.js"
+    "/assets/ProductPage-D5Ikr_Nk.js"
   ],
   "src/components/ui/LangSwitch.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/ui/OpennessBadge.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/OpennessBadge.vue_vue_type_script_setup_true_lang-CY76o333.js"
+    "/assets/OpennessBadge.vue_vue_type_script_setup_true_lang-CuSEgfeV.js"
   ],
   "src/components/ui/ProductMark.vue?vue&type=script&setup=true&lang.ts": [],
   "src/components/ui/StatusBadge.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/OpennessBadge.vue_vue_type_script_setup_true_lang-CY76o333.js"
+    "/assets/OpennessBadge.vue_vue_type_script_setup_true_lang-CuSEgfeV.js"
   ],
   "src/components/ui/ThemeToggle.vue?vue&type=script&setup=true&lang.ts": [],
   "src/composables/useLocale.ts": [],
   "src/composables/useSeo.ts": [
-    "/assets/useSeo-BYQp_FRO.js"
+    "/assets/useSeo-Co7cE22q.js"
   ],
   "src/composables/useTheme.ts": [],
   "src/data/flows.ts": [
-    "/assets/ProductPage-CKKYVoyR.js"
+    "/assets/ProductPage-D5Ikr_Nk.js"
   ],
   "src/data/products.ts": [],
   "src/data/site.ts": [
-    "/assets/useSeo-BYQp_FRO.js"
+    "/assets/useSeo-Co7cE22q.js"
   ],
   "src/i18n/en.ts": [],
   "src/i18n/zh.ts": [],
@@ -83,34 +83,34 @@
   "src/layouts/SiteHeader.vue?vue&type=script&setup=true&lang.ts": [],
   "src/main.ts": [],
   "src/pages/AboutPage.vue": [
-    "/assets/AboutPage-COGAytLb.js"
+    "/assets/AboutPage-DYUEfkaf.js"
   ],
   "src/pages/AboutPage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/AboutPage-COGAytLb.js"
+    "/assets/AboutPage-DYUEfkaf.js"
   ],
   "src/pages/HomePage.vue": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/pages/HomePage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/HomePage-BYEGiX65.js"
+    "/assets/HomePage-DqhkWGEE.js"
   ],
   "src/pages/LegalPage.vue": [
-    "/assets/LegalPage-DaSD6Xf-.js"
+    "/assets/LegalPage-C6lHo1j3.js"
   ],
   "src/pages/LegalPage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/LegalPage-DaSD6Xf-.js"
+    "/assets/LegalPage-C6lHo1j3.js"
   ],
   "src/pages/NotFoundPage.vue": [
-    "/assets/NotFoundPage-BBcI4g_0.js"
+    "/assets/NotFoundPage-DoqL7Hfb.js"
   ],
   "src/pages/NotFoundPage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/NotFoundPage.vue_vue_type_script_setup_true_lang-DIVTu5e3.js"
+    "/assets/NotFoundPage.vue_vue_type_script_setup_true_lang-DijFuYYn.js"
   ],
   "src/pages/ProductPage.vue": [
-    "/assets/ProductPage-CKKYVoyR.js"
+    "/assets/ProductPage-D5Ikr_Nk.js"
   ],
   "src/pages/ProductPage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/ProductPage-CKKYVoyR.js"
+    "/assets/ProductPage-D5Ikr_Nk.js"
   ],
   "src/routes.ts": [],
   "src/styles/main.css": []
