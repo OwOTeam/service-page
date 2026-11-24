@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OwO! Identity">
+  <title>OwO! Identity</title>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16376f"/>
+      <stop offset="1" stop-color="#0a1c3b"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#5bb4f7"/>
+      <stop offset="0.6" stop-color="#1687e8"/>
+      <stop offset="1" stop-color="#0d6fcb"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="128" height="128" rx="30" fill="url(#tile)"/>
+  <circle cx="64" cy="66" r="50" fill="#1687e8" fill-opacity=".16"/>
+
+  <!-- 耳羽 -->
+  <g fill="#1687e8" stroke="#1687e8" stroke-width="7" stroke-linejoin="round">
+    <path d="M35 30 53 42 36 55Z"/>
+    <path d="M93 30 75 42 92 55Z"/>
+  </g>
+
+  <!-- 翅膀 -->
+  <path d="M30 64c-7 18-2 33 12 41 1-15-1-29-5-41Z" fill="#0b63b8"/>
+  <path d="M98 64c7 18 2 33-12 41-1-15 1-29 5-41Z" fill="#0b63b8"/>
+
+  <!-- 身体与头 -->
+  <ellipse cx="64" cy="68" rx="36" ry="40" fill="url(#body)"/>
+
+  <!-- 肚子：钥匙孔盾牌 -->
+  <path d="M64 77 78 82v10c0 7-6.500 11.500-14 14-7.500-2.500-14-7-14-14V82Z" fill="#dceeff"/>
+  <circle cx="64" cy="90" r="3.800" fill="#1687e8"/>
+  <path d="M62.200 92h3.600l1.600 9h-6.800Z" fill="#1687e8"/>
+
+  <!-- 眼睛 -->
+  <circle cx="47.500" cy="56" r="14" fill="#fff"/>
+  <circle cx="80.500" cy="56" r="14" fill="#fff"/>
+  <circle cx="49.500" cy="57.500" r="7.200" fill="#102a56"/>
+  <circle cx="78.500" cy="57.500" r="7.200" fill="#102a56"/>
+  <circle cx="51.800" cy="55" r="2.600" fill="#fff"/>
+  <circle cx="80.800" cy="55" r="2.600" fill="#fff"/>
+
+  <!-- 喙 -->
+  <path d="M59.500 64.500h9L64 73Z" fill="#dceeff" stroke="#102a56" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- 脚 -->
+  <ellipse cx="53" cy="110" rx="7" ry="3.500" fill="#dceeff"/>
+  <ellipse cx="75" cy="110" rx="7" ry="3.500" fill="#dceeff"/>
+</svg>
