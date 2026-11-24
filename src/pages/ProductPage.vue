@@ -105,7 +105,7 @@ useSeo({
         </div>
         <dl class="mt-10 grid gap-4 sm:grid-cols-3">
           <div v-for="s in product.stats" :key="s.value" class="card p-5">
-            <dt class="font-mono text-2xl font-semibold" :style="{ color: product.accent }">{{ s.value }}</dt>
+            <dt class="font-mono text-2xl font-semibold" :style="{ color: `color-mix(in srgb, ${product.accent} 60%, var(--ink))` }">{{ s.value }}</dt>
             <dd class="mt-1 text-sm text-muted">{{ tr(s.label) }}</dd>
           </div>
         </dl>

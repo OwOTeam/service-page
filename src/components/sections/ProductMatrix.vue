@@ -38,7 +38,7 @@ const { tr } = useLocale()
         <p class="relative mt-2 text-sm text-muted">{{ tr(p.summary) }}</p>
         <dl class="relative mt-6 grid grid-cols-3 gap-3 border-t border-line pt-4">
           <div v-for="s in p.stats" :key="s.value">
-            <dt class="font-mono text-base font-semibold" :style="{ color: p.accent }">{{ s.value }}</dt>
+            <dt class="font-mono text-base font-semibold" :style="{ color: `color-mix(in srgb, ${p.accent} 60%, var(--ink))` }">{{ s.value }}</dt>
             <dd class="text-xs text-muted">{{ tr(s.label) }}</dd>
           </div>
         </dl>
