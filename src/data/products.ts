@@ -136,6 +136,10 @@ curl https://sso.owoserver.com/tenants/<slug>/.well-known/openid-configuration`,
     gallery: [],
     notes: [
       {
+        zh: 'OwO! TravelAI 与 OwO! Recorder 的账号登录都基于它（OIDC）。',
+        en: 'Sign-in for OwO! TravelAI and OwO! Recorder is built on it (OIDC).',
+      },
+      {
         zh: '定位为“自托管企业 IdP，生产可用，含文档中记录的例外”。不宣称替代其他 IdP，也不宣称多活写复制。',
         en: 'Positioned as a self-hosted enterprise IdP, production-ready with documented exceptions. It makes no claim to replace other IdPs and no claim of multi-active write replication.',
       },

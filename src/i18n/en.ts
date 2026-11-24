@@ -51,7 +51,8 @@ const en: typeof zh = {
     caption1: 'OIDC · TOTP · Passkey',
     caption2: 'Restore a setup in one command',
     caption3: 'REST · WebSocket',
-    note: 'TravelAI accounts are built on OwO! Identity; the other products work on their own.',
+    captionRecorder: 'OIDC sign-in · lectures',
+    note: 'TravelAI and Recorder accounts are both built on OwO! Identity; Win Deployer and FlightAssistant work on their own.',
   },
   scenarios: {
     title: 'Start from your situation',

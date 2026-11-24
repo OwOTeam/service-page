@@ -49,7 +49,8 @@ export default {
     caption1: 'OIDC · TOTP · Passkey',
     caption2: '一条命令还原环境',
     caption3: 'REST · WebSocket',
-    note: 'TravelAI 的账号体系基于 OwO! Identity；其余产品可单独使用。',
+    captionRecorder: 'OIDC 登录 · 课堂录音',
+    note: 'TravelAI 与 Recorder 的账号体系都基于 OwO! Identity；Win Deployer 与 FlightAssistant 可单独使用。',
   },
   scenarios: {
     title: '从你的场景出发',
